@@ -1,0 +1,1038 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20210121 20:34:43.849" generator="Robot 3.1.2 (Python 2.7.14 on win32)">
+<suite source="C:\Users\Jeffrey\Desktop\optimy_rf_test\tests\login" id="s1" name="Login">
+<suite source="C:\Users\Jeffrey\Desktop\optimy_rf_test\tests\login\verify_forgot_password_page.robot" id="s1-s1" name="Verify Forgot Password Page">
+<kw type="setup" name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Given I Have Access On Optimy Web Application</arg>
+<arg>AND</arg>
+<arg>Click Lost Password Button</arg>
+</arguments>
+<kw name="Given I Have Access On Optimy Web Application">
+<kw name="Open Optimy Web App" library="steps_login_page">
+<arguments>
+<arg>${optimy_url}</arg>
+</arguments>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20210121 20:34:44.204" level="INFO">Opening browser 'chrome' to base url 'https://login.optimyapp.com/'.</msg>
+<status status="PASS" endtime="20210121 20:34:49.403" starttime="20210121 20:34:44.204"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20210121 20:34:51.547" starttime="20210121 20:34:49.403"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${login_container}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:34:51.583" starttime="20210121 20:34:51.547"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:34:51.583" starttime="20210121 20:34:44.204"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:34:51.583" starttime="20210121 20:34:44.203"></status>
+</kw>
+<kw name="Click Lost Password Button">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${lost_password_button}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:34:51.616" starttime="20210121 20:34:51.584"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${lost_password_button}</arg>
+</arguments>
+<msg timestamp="20210121 20:34:51.617" level="INFO">Clicking element '//a[contains(text(),'Lost password')]'.</msg>
+<status status="PASS" endtime="20210121 20:34:51.678" starttime="20210121 20:34:51.616"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${recover_email_textbox}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:34:51.927" starttime="20210121 20:34:51.679"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:34:51.928" starttime="20210121 20:34:51.583"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:34:51.928" starttime="20210121 20:34:44.203"></status>
+</kw>
+<test id="s1-s1-t1" name="Verify Logo Is Displayed">
+<kw name="Verify Lost Password Page">
+<arguments>
+<arg>${optimy_logo}</arg>
+</arguments>
+<kw name="When I View lost password page">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${login_container}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:34:51.952" starttime="20210121 20:34:51.930"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:34:51.953" starttime="20210121 20:34:51.930"></status>
+</kw>
+<kw name="Then I Should be able to see ${element}">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:34:51.983" starttime="20210121 20:34:51.953"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:34:51.984" starttime="20210121 20:34:51.953"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:34:51.984" starttime="20210121 20:34:51.929"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:34:51.985" critical="yes" starttime="20210121 20:34:51.928"></status>
+</test>
+<test id="s1-s1-t2" name="Verify Email Textbox Is Displayed">
+<kw name="Verify Lost Password Page">
+<arguments>
+<arg>${recover_email_textbox}</arg>
+</arguments>
+<kw name="When I View lost password page">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${login_container}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:34:52.009" starttime="20210121 20:34:51.991"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:34:52.009" starttime="20210121 20:34:51.990"></status>
+</kw>
+<kw name="Then I Should be able to see ${element}">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:34:52.028" starttime="20210121 20:34:52.010"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:34:52.028" starttime="20210121 20:34:52.009"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:34:52.028" starttime="20210121 20:34:51.989"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:34:52.029" critical="yes" starttime="20210121 20:34:51.988"></status>
+</test>
+<test id="s1-s1-t3" name="Verify Login Button Is Displayed">
+<kw name="Verify Lost Password Page">
+<arguments>
+<arg>${recover_password_button}</arg>
+</arguments>
+<kw name="When I View lost password page">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${login_container}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:34:52.057" starttime="20210121 20:34:52.041"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:34:52.057" starttime="20210121 20:34:52.040"></status>
+</kw>
+<kw name="Then I Should be able to see ${element}">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:34:52.081" starttime="20210121 20:34:52.058"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:34:52.081" starttime="20210121 20:34:52.058"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:34:52.082" starttime="20210121 20:34:52.040"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:34:52.082" critical="yes" starttime="20210121 20:34:52.039"></status>
+</test>
+<test id="s1-s1-t4" name="Verify Cancel Link Is Displayed">
+<kw name="Verify Lost Password Page">
+<arguments>
+<arg>${recover_cancel_button}</arg>
+</arguments>
+<kw name="When I View lost password page">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${login_container}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:34:52.105" starttime="20210121 20:34:52.086"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:34:52.105" starttime="20210121 20:34:52.085"></status>
+</kw>
+<kw name="Then I Should be able to see ${element}">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:34:52.130" starttime="20210121 20:34:52.106"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:34:52.130" starttime="20210121 20:34:52.105"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:34:52.131" starttime="20210121 20:34:52.085"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:34:52.131" critical="yes" starttime="20210121 20:34:52.084"></status>
+</test>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20210121 20:34:54.392" starttime="20210121 20:34:52.136"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:34:54.392" starttime="20210121 20:34:43.881"></status>
+</suite>
+<suite source="C:\Users\Jeffrey\Desktop\optimy_rf_test\tests\login\verify_forgot_password_page_validation.robot" id="s1-s2" name="Verify Forgot Password Page Validation">
+<kw type="setup" name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Given I Have Access On Optimy Web Application</arg>
+<arg>AND</arg>
+<arg>Click Lost Password Button</arg>
+</arguments>
+<kw name="Given I Have Access On Optimy Web Application">
+<kw name="Open Optimy Web App" library="steps_login_page">
+<arguments>
+<arg>${optimy_url}</arg>
+</arguments>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20210121 20:34:54.414" level="INFO">Opening browser 'chrome' to base url 'https://login.optimyapp.com/'.</msg>
+<status status="PASS" endtime="20210121 20:34:59.504" starttime="20210121 20:34:54.413"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20210121 20:35:01.643" starttime="20210121 20:34:59.505"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${login_container}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:35:01.680" starttime="20210121 20:35:01.643"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:01.680" starttime="20210121 20:34:54.413"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:01.681" starttime="20210121 20:34:54.412"></status>
+</kw>
+<kw name="Click Lost Password Button">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${lost_password_button}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:35:01.713" starttime="20210121 20:35:01.681"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${lost_password_button}</arg>
+</arguments>
+<msg timestamp="20210121 20:35:01.713" level="INFO">Clicking element '//a[contains(text(),'Lost password')]'.</msg>
+<status status="PASS" endtime="20210121 20:35:01.772" starttime="20210121 20:35:01.713"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${recover_email_textbox}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:35:02.019" starttime="20210121 20:35:01.772"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:02.019" starttime="20210121 20:35:01.681"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:02.019" starttime="20210121 20:34:54.412"></status>
+</kw>
+<test id="s1-s2-t1" name="Verify Validation Message For Empty Email Field">
+<kw name="Verify Forgot Password Page Validation Message - Empty Fields">
+<arguments>
+<arg>${invalid_recover_email_textbox}</arg>
+<arg>${expected_required_field_message}</arg>
+</arguments>
+<kw name="When I Click Recover Password Button">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${recover_password_button}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:35:02.051" starttime="20210121 20:35:02.021"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${recover_password_button}</arg>
+</arguments>
+<msg timestamp="20210121 20:35:02.052" level="INFO">Clicking button '//button[contains(text(),'Recover my access')]'.</msg>
+<status status="PASS" endtime="20210121 20:35:02.134" starttime="20210121 20:35:02.051"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:02.134" starttime="20210121 20:35:02.021"></status>
+</kw>
+<kw name="Then I Should See Required Field Validation Message For ${element}">
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20210121 20:35:02.136" level="INFO">${element} = (//input[@name='email']/..//span[contains(text(),'This field is required')])[1]</msg>
+<status status="PASS" endtime="20210121 20:35:02.137" starttime="20210121 20:35:02.136"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:35:02.167" starttime="20210121 20:35:02.137"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:02.167" starttime="20210121 20:35:02.135"></status>
+</kw>
+<kw name="And ${expected_required_field_message} should Be The Same As ${element_message}">
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<assign>
+<var>${actual_message}</var>
+</assign>
+<msg timestamp="20210121 20:35:02.191" level="INFO">${actual_message} = This field is required.</msg>
+<status status="PASS" endtime="20210121 20:35:02.191" starttime="20210121 20:35:02.168"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:35:02.208" starttime="20210121 20:35:02.192"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${expected_required_field_message}</arg>
+<arg>${actual_message}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:35:02.209" starttime="20210121 20:35:02.208"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:02.209" starttime="20210121 20:35:02.167"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:02.209" starttime="20210121 20:35:02.020"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:02.210" critical="yes" starttime="20210121 20:35:02.019"></status>
+</test>
+<test id="s1-s2-t2" name="Verify Validation Message For Invalid Email Format">
+<kw name="Verify Forgot Password Page Validation Message - Invalid Format">
+<arguments>
+<arg>${invalid_format_recover_email_textbox}</arg>
+<arg>${expected_invalid_email_format_message}</arg>
+</arguments>
+<kw name="When I Input Invalid Email Value">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${recover_email_textbox}</arg>
+<arg>${invalid_email_input}</arg>
+</arguments>
+<msg timestamp="20210121 20:35:02.219" level="INFO">Typing text 'invalid_email.com' into text field '(//input[@name='email'])[2]'.</msg>
+<status status="PASS" endtime="20210121 20:35:02.345" starttime="20210121 20:35:02.219"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:02.346" starttime="20210121 20:35:02.219"></status>
+</kw>
+<kw name="And I Click Recover Password Button">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${recover_password_button}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:35:02.363" starttime="20210121 20:35:02.346"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${recover_password_button}</arg>
+</arguments>
+<msg timestamp="20210121 20:35:02.364" level="INFO">Clicking button '//button[contains(text(),'Recover my access')]'.</msg>
+<status status="PASS" endtime="20210121 20:35:02.422" starttime="20210121 20:35:02.363"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:02.422" starttime="20210121 20:35:02.346"></status>
+</kw>
+<kw name="Then I Should See Required Field Validation Message For ${element}">
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20210121 20:35:02.423" level="INFO">${element} = (//input[@name='email']/..//span[contains(text(),'Please enter a valid email address (e.g.: john.smith@gmail.com).')])[1]</msg>
+<status status="PASS" endtime="20210121 20:35:02.423" starttime="20210121 20:35:02.423"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:35:02.448" starttime="20210121 20:35:02.423"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:02.448" starttime="20210121 20:35:02.422"></status>
+</kw>
+<kw name="And ${expected_invalid_email_format_message} should Be The Same As ${element_message}">
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<assign>
+<var>${actual_message}</var>
+</assign>
+<msg timestamp="20210121 20:35:02.467" level="INFO">${actual_message} = Please enter a valid email address (e.g.: john.smith@gmail.com).</msg>
+<status status="PASS" endtime="20210121 20:35:02.467" starttime="20210121 20:35:02.449"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:35:02.487" starttime="20210121 20:35:02.468"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${expected_required_field_message}</arg>
+<arg>${actual_message}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:35:02.488" starttime="20210121 20:35:02.487"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:02.488" starttime="20210121 20:35:02.448"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:02.488" starttime="20210121 20:35:02.218"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:02.489" critical="yes" starttime="20210121 20:35:02.217"></status>
+</test>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20210121 20:35:04.756" starttime="20210121 20:35:02.498"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:04.756" starttime="20210121 20:34:54.403"></status>
+</suite>
+<suite source="C:\Users\Jeffrey\Desktop\optimy_rf_test\tests\login\verify_login_page.robot" id="s1-s3" name="Verify Login Page">
+<kw type="setup" name="Given I Have Access On Optimy Web Application">
+<kw name="Open Optimy Web App" library="steps_login_page">
+<arguments>
+<arg>${optimy_url}</arg>
+</arguments>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20210121 20:35:04.783" level="INFO">Opening browser 'chrome' to base url 'https://login.optimyapp.com/'.</msg>
+<status status="PASS" endtime="20210121 20:35:10.249" starttime="20210121 20:35:04.783"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20210121 20:35:12.377" starttime="20210121 20:35:10.250"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${login_container}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:35:12.417" starttime="20210121 20:35:12.377"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:12.417" starttime="20210121 20:35:04.782"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:12.417" starttime="20210121 20:35:04.781"></status>
+</kw>
+<test id="s1-s3-t1" name="Verify Logo Is Displayed">
+<kw name="Verify Login Page">
+<arguments>
+<arg>${optimy_logo}</arg>
+</arguments>
+<kw name="When I View login page">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${login_container}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:35:12.443" starttime="20210121 20:35:12.419"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:12.444" starttime="20210121 20:35:12.419"></status>
+</kw>
+<kw name="Then I Should be able to see ${element}">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:35:12.469" starttime="20210121 20:35:12.444"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:12.469" starttime="20210121 20:35:12.444"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:12.469" starttime="20210121 20:35:12.419"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:12.470" critical="yes" starttime="20210121 20:35:12.417"></status>
+</test>
+<test id="s1-s3-t2" name="Verify Email Textbox Is Displayed">
+<kw name="Verify Login Page">
+<arguments>
+<arg>${email_textbox}</arg>
+</arguments>
+<kw name="When I View login page">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${login_container}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:35:12.505" starttime="20210121 20:35:12.482"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:12.505" starttime="20210121 20:35:12.482"></status>
+</kw>
+<kw name="Then I Should be able to see ${element}">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:35:12.531" starttime="20210121 20:35:12.506"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:12.531" starttime="20210121 20:35:12.505"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:12.531" starttime="20210121 20:35:12.481"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:12.532" critical="yes" starttime="20210121 20:35:12.478"></status>
+</test>
+<test id="s1-s3-t3" name="Verify Password Textbox Is Displayed">
+<kw name="Verify Login Page">
+<arguments>
+<arg>${password_textbox}</arg>
+</arguments>
+<kw name="When I View login page">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${login_container}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:35:12.561" starttime="20210121 20:35:12.540"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:12.561" starttime="20210121 20:35:12.539"></status>
+</kw>
+<kw name="Then I Should be able to see ${element}">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:35:12.585" starttime="20210121 20:35:12.562"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:12.585" starttime="20210121 20:35:12.562"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:12.585" starttime="20210121 20:35:12.539"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:12.586" critical="yes" starttime="20210121 20:35:12.538"></status>
+</test>
+<test id="s1-s3-t4" name="Verify Login Button Is Displayed">
+<kw name="Verify Login Page">
+<arguments>
+<arg>${login_button}</arg>
+</arguments>
+<kw name="When I View login page">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${login_container}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:35:12.611" starttime="20210121 20:35:12.594"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:12.612" starttime="20210121 20:35:12.594"></status>
+</kw>
+<kw name="Then I Should be able to see ${element}">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:35:12.641" starttime="20210121 20:35:12.613"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:12.641" starttime="20210121 20:35:12.612"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:12.641" starttime="20210121 20:35:12.594"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:12.642" critical="yes" starttime="20210121 20:35:12.593"></status>
+</test>
+<test id="s1-s3-t5" name="Verify Lost Password Link Is Displayed">
+<kw name="Verify Login Page">
+<arguments>
+<arg>${lost_password_button}</arg>
+</arguments>
+<kw name="When I View login page">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${login_container}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:35:12.670" starttime="20210121 20:35:12.650"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:12.670" starttime="20210121 20:35:12.650"></status>
+</kw>
+<kw name="Then I Should be able to see ${element}">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:35:12.695" starttime="20210121 20:35:12.671"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:12.695" starttime="20210121 20:35:12.670"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:12.696" starttime="20210121 20:35:12.649"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:12.696" critical="yes" starttime="20210121 20:35:12.648"></status>
+</test>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20210121 20:35:14.959" starttime="20210121 20:35:12.702"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:14.959" starttime="20210121 20:35:04.767"></status>
+</suite>
+<suite source="C:\Users\Jeffrey\Desktop\optimy_rf_test\tests\login\verify_login_page_validation.robot" id="s1-s4" name="Verify Login Page Validation">
+<kw type="setup" name="Given I Have Access On Optimy Web Application">
+<kw name="Open Optimy Web App" library="steps_login_page">
+<arguments>
+<arg>${optimy_url}</arg>
+</arguments>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20210121 20:35:14.980" level="INFO">Opening browser 'chrome' to base url 'https://login.optimyapp.com/'.</msg>
+<status status="PASS" endtime="20210121 20:35:24.708" starttime="20210121 20:35:14.980"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20210121 20:35:26.828" starttime="20210121 20:35:24.709"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${login_container}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:35:26.857" starttime="20210121 20:35:26.829"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:26.857" starttime="20210121 20:35:14.979"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:26.857" starttime="20210121 20:35:14.979"></status>
+</kw>
+<test id="s1-s4-t1" name="Verify Validation Message For Empty Email Field">
+<kw name="Verify Login Page Validation Message - Empty Fields">
+<arguments>
+<arg>${invalid_email_textbox}</arg>
+<arg>${expected_required_field_message}</arg>
+</arguments>
+<kw name="When I Click Login Button">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${login_button}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:35:26.889" starttime="20210121 20:35:26.860"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${login_button}</arg>
+</arguments>
+<msg timestamp="20210121 20:35:26.890" level="INFO">Clicking button '//button[contains(text(),'Login')]'.</msg>
+<status status="PASS" endtime="20210121 20:35:26.974" starttime="20210121 20:35:26.890"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:26.974" starttime="20210121 20:35:26.860"></status>
+</kw>
+<kw name="Then I Should See Required Field Validation Message For ${element}">
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20210121 20:35:26.976" level="INFO">${element} = (//input[@name='email']/..//span[contains(text(),'This field is required')])[1]</msg>
+<status status="PASS" endtime="20210121 20:35:26.976" starttime="20210121 20:35:26.975"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:35:27.000" starttime="20210121 20:35:26.976"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:27.000" starttime="20210121 20:35:26.975"></status>
+</kw>
+<kw name="And ${expected_required_field_message} should Be The Same As ${element_message}">
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<assign>
+<var>${actual_message}</var>
+</assign>
+<msg timestamp="20210121 20:35:27.024" level="INFO">${actual_message} = This field is required.</msg>
+<status status="PASS" endtime="20210121 20:35:27.024" starttime="20210121 20:35:27.001"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:35:27.044" starttime="20210121 20:35:27.024"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${expected_required_field_message}</arg>
+<arg>${actual_message}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:35:27.044" starttime="20210121 20:35:27.044"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:27.044" starttime="20210121 20:35:27.001"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:27.044" starttime="20210121 20:35:26.859"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:27.045" critical="yes" starttime="20210121 20:35:26.858"></status>
+</test>
+<test id="s1-s4-t2" name="Verify Validation Message For Empty Password Field">
+<kw name="Verify Login Page Validation Message - Empty Fields">
+<arguments>
+<arg>${invalid_password_textbox}</arg>
+<arg>${expected_required_field_message}</arg>
+</arguments>
+<kw name="When I Click Login Button">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${login_button}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:35:27.074" starttime="20210121 20:35:27.054"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${login_button}</arg>
+</arguments>
+<msg timestamp="20210121 20:35:27.074" level="INFO">Clicking button '//button[contains(text(),'Login')]'.</msg>
+<status status="PASS" endtime="20210121 20:35:27.129" starttime="20210121 20:35:27.074"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:27.129" starttime="20210121 20:35:27.054"></status>
+</kw>
+<kw name="Then I Should See Required Field Validation Message For ${element}">
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20210121 20:35:27.130" level="INFO">${element} = (//input[@name='password']/..//span[contains(text(),'This field is required')])[1]</msg>
+<status status="PASS" endtime="20210121 20:35:27.130" starttime="20210121 20:35:27.130"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:35:27.153" starttime="20210121 20:35:27.130"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:27.154" starttime="20210121 20:35:27.129"></status>
+</kw>
+<kw name="And ${expected_required_field_message} should Be The Same As ${element_message}">
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<assign>
+<var>${actual_message}</var>
+</assign>
+<msg timestamp="20210121 20:35:27.176" level="INFO">${actual_message} = This field is required.</msg>
+<status status="PASS" endtime="20210121 20:35:27.176" starttime="20210121 20:35:27.154"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:35:27.193" starttime="20210121 20:35:27.176"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${expected_required_field_message}</arg>
+<arg>${actual_message}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:35:27.194" starttime="20210121 20:35:27.194"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:27.194" starttime="20210121 20:35:27.154"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:27.194" starttime="20210121 20:35:27.053"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:27.195" critical="yes" starttime="20210121 20:35:27.052"></status>
+</test>
+<test id="s1-s4-t3" name="Verify Validation Message For Invalid Email Format">
+<kw name="Verify Login Page Validation Message - Invalid Format">
+<arguments>
+<arg>${invalid_format_email_textbox}</arg>
+<arg>${expected_invalid_email_format_message}</arg>
+</arguments>
+<kw name="When I Input Invalid Email Value">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${email_textbox}</arg>
+<arg>${invalid_email_input}</arg>
+</arguments>
+<msg timestamp="20210121 20:35:27.205" level="INFO">Typing text 'invalid_email.com' into text field '(//input[@name='email'])[1]'.</msg>
+<status status="PASS" endtime="20210121 20:35:27.331" starttime="20210121 20:35:27.205"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:27.331" starttime="20210121 20:35:27.204"></status>
+</kw>
+<kw name="And I Click Login Button">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${login_button}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:35:27.347" starttime="20210121 20:35:27.331"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${login_button}</arg>
+</arguments>
+<msg timestamp="20210121 20:35:27.348" level="INFO">Clicking button '//button[contains(text(),'Login')]'.</msg>
+<status status="PASS" endtime="20210121 20:35:27.398" starttime="20210121 20:35:27.348"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:27.399" starttime="20210121 20:35:27.331"></status>
+</kw>
+<kw name="Then I Should See Required Field Validation Message For ${element}">
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20210121 20:35:27.400" level="INFO">${element} = (//input[@name='email']/..//span[contains(text(),'Please enter a valid email address (e.g.: john.smith@gmail.com).')])[1]</msg>
+<status status="PASS" endtime="20210121 20:35:27.400" starttime="20210121 20:35:27.400"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:35:27.419" starttime="20210121 20:35:27.400"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:27.419" starttime="20210121 20:35:27.399"></status>
+</kw>
+<kw name="And ${expected_invalid_email_format_message} should Be The Same As ${element_message}">
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<assign>
+<var>${actual_message}</var>
+</assign>
+<msg timestamp="20210121 20:35:27.435" level="INFO">${actual_message} = Please enter a valid email address (e.g.: john.smith@gmail.com).</msg>
+<status status="PASS" endtime="20210121 20:35:27.435" starttime="20210121 20:35:27.420"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:35:27.451" starttime="20210121 20:35:27.435"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${expected_required_field_message}</arg>
+<arg>${actual_message}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:35:27.452" starttime="20210121 20:35:27.451"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:27.452" starttime="20210121 20:35:27.419"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:27.452" starttime="20210121 20:35:27.204"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:27.453" critical="yes" starttime="20210121 20:35:27.203"></status>
+</test>
+<test id="s1-s4-t4" name="Verify Validation Message For Not Registered Email Format">
+<kw name="Verify Login Page Validation Message - Not Registered Account">
+<arguments>
+<arg>${invalid_email_or_password_message}</arg>
+<arg>${expected_not_registered_account_message}</arg>
+</arguments>
+<kw name="When I Input valid Email Value">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${email_textbox}</arg>
+<arg>${valid_email_input}</arg>
+</arguments>
+<msg timestamp="20210121 20:35:27.461" level="INFO">Typing text 'test_email@gmail.com' into text field '(//input[@name='email'])[1]'.</msg>
+<status status="PASS" endtime="20210121 20:35:27.577" starttime="20210121 20:35:27.461"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:27.578" starttime="20210121 20:35:27.460"></status>
+</kw>
+<kw name="And I Input valid Password Value">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${password_textbox}</arg>
+<arg>${valid_password_input}</arg>
+</arguments>
+<msg timestamp="20210121 20:35:27.579" level="INFO">Typing text 'test123' into text field '(//input[@name='password'])[1]'.</msg>
+<status status="PASS" endtime="20210121 20:35:27.685" starttime="20210121 20:35:27.578"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:27.685" starttime="20210121 20:35:27.578"></status>
+</kw>
+<kw name="And I Click Login Button">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${login_button}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:35:27.703" starttime="20210121 20:35:27.685"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${login_button}</arg>
+</arguments>
+<msg timestamp="20210121 20:35:27.704" level="INFO">Clicking button '//button[contains(text(),'Login')]'.</msg>
+<status status="PASS" endtime="20210121 20:35:27.757" starttime="20210121 20:35:27.703"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:27.757" starttime="20210121 20:35:27.685"></status>
+</kw>
+<kw name="Then I Should See Required Field Validation Message For ${element}">
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20210121 20:35:27.758" level="INFO">${element} = //div[contains(text(),'The email address or password is incorrect.')]</msg>
+<status status="PASS" endtime="20210121 20:35:27.758" starttime="20210121 20:35:27.758"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:35:29.307" starttime="20210121 20:35:27.759"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:29.307" starttime="20210121 20:35:27.757"></status>
+</kw>
+<kw name="And ${expected_not_registered_account_message} should Be The Same As ${element_message}">
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<assign>
+<var>${actual_message}</var>
+</assign>
+<msg timestamp="20210121 20:35:29.335" level="INFO">${actual_message} = The email address or password is incorrect.</msg>
+<status status="PASS" endtime="20210121 20:35:29.335" starttime="20210121 20:35:29.308"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:35:29.355" starttime="20210121 20:35:29.335"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${expected_required_field_message}</arg>
+<arg>${actual_message}</arg>
+</arguments>
+<status status="PASS" endtime="20210121 20:35:29.356" starttime="20210121 20:35:29.356"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:29.356" starttime="20210121 20:35:29.307"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:29.357" starttime="20210121 20:35:27.460"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:29.358" critical="yes" starttime="20210121 20:35:27.459"></status>
+</test>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20210121 20:35:31.812" starttime="20210121 20:35:29.368"></status>
+</kw>
+<status status="PASS" endtime="20210121 20:35:31.812" starttime="20210121 20:35:14.971"></status>
+</suite>
+<status status="PASS" endtime="20210121 20:35:31.824" starttime="20210121 20:34:43.853"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="15">Critical Tests</stat>
+<stat fail="0" pass="15">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Login" pass="15">Login</stat>
+<stat fail="0" id="s1-s1" name="Verify Forgot Password Page" pass="4">Login.Verify Forgot Password Page</stat>
+<stat fail="0" id="s1-s2" name="Verify Forgot Password Page Validation" pass="2">Login.Verify Forgot Password Page Validation</stat>
+<stat fail="0" id="s1-s3" name="Verify Login Page" pass="5">Login.Verify Login Page</stat>
+<stat fail="0" id="s1-s4" name="Verify Login Page Validation" pass="4">Login.Verify Login Page Validation</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
